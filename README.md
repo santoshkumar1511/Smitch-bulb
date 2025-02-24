@@ -17,7 +17,7 @@ This repository provides a method to control Smitch bulbs that have become unusa
 
 ---
 
-## Controlling the Bulb Using Termux
+## Controlling the Bulb Using Termux(Only work With white light bulb) 
 
 ### Adjust Brightness
 To adjust the brightness of the bulb, use the following command in Termux:
