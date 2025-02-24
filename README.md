@@ -59,7 +59,7 @@ If you want to flash custom firmware (e.g., Tasmota) to the bulb, follow these s
 ### Step 3: Update to Full Tasmota Firmware
 1. After flashing the minimal firmware, navigate to:
    ```
-   http://192.168.4.1:1336/up
+   http://192.168.4.1/up
    ```
 2. Upload the full Tasmota firmware file.
 
