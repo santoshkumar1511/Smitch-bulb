@@ -1,5 +1,3 @@
-
-
 # Smitch Bulb Control and Firmware Update
 
 This repository provides a method to control Smitch bulbs that have become unusable after the company shut down. The steps below will guide you on how to control the bulb's brightness and temperature using Termux, as well as how to update the bulb's firmware to Tasmota for better functionality.
@@ -13,16 +11,16 @@ This repository provides a method to control Smitch bulbs that have become unusa
    ```bash
    pkg install telnet
    ```
-3. **Smitch Bulb**: Ensure the bulb is connected to your Wi-Fi network and accessible at `192.168.4.1`.
+3. **Smitch Bulb**: Ensure the bulb is connected to your Wi-Fi network. The bulb's IP address can be any IP (`<ip>`), but most of the time, it is `192.168.4.1`.
 
 ---
 
-## Controlling the Bulb Using Termux(Only work With white light bulb) 
+## Controlling the Bulb Using Termux (Only Works with White Light Bulbs)
 
 ### Adjust Brightness
 To adjust the brightness of the bulb, use the following command in Termux:
 ```bash
-(echo -ne "0001xx020600\r"; sleep 2; echo -ne "KEEPALIVE\r"; sleep 2) | telnet 192.168.4.1 80
+(echo -ne "0001xx020600\r"; sleep 2; echo -ne "KEEPALIVE\r"; sleep 2) | telnet <ip> 80
 ```
 - Replace `600` with the desired brightness percentage. For example:
   - `600` for 60% brightness.
@@ -31,7 +29,7 @@ To adjust the brightness of the bulb, use the following command in Termux:
 ### Adjust Temperature
 To adjust the color temperature of the bulb, use the following command:
 ```bash
-(echo -ne "0001xx016000\r"; sleep 2; echo -ne "KEEPALIVE\r"; sleep 2) | telnet 192.168.4.1 80
+(echo -ne "0001xx016000\r"; sleep 2; echo -ne "KEEPALIVE\r"; sleep 2) | telnet <ip> 80
 ```
 - Replace `6000` with the desired temperature value. For example:
   - `6000` for 6000K (warm light).
@@ -46,20 +44,20 @@ If you want to flash custom firmware (e.g., Tasmota) to the bulb, follow these s
 ### Step 1: Access the Firmware Update Page
 1. Open a browser and navigate to:
    ```
-   http://192.168.4.1:1336/update
+   http://<bulb ip>:1336/update
    ```
 2. Enter the following credentials:
    - **Username**: `admin`
    - **Password**: `c21pdGNo`
 
 ### Step 2: Flash Tasmota Minimal Firmware
-1. Download the Tasmota minimal firmware from the [official Tasmota repository](https://github.com/arendst/Tasmota).
+1. Download the Tasmota minimal firmware from the [official Tasmota repository](https://ota.tasmota.com/tasmota/release/).
 2. Upload the firmware file on the update page.
 
 ### Step 3: Update to Full Tasmota Firmware
 1. After flashing the minimal firmware, navigate to:
    ```
-   http://192.168.4.1/up
+   http://<bulb ip>/up
    ```
 2. Upload the full Tasmota firmware file.
 
