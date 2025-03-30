@@ -51,7 +51,7 @@ If you want to flash custom firmware (e.g., Tasmota) to the bulb, follow these s
    - **Password**: `c21pdGNo`
 
 ### Step 2: Flash Tasmota Minimal Firmware
-1. Download the Tasmota minimal firmware from the [official Tasmota repository](https://ota.tasmota.com/tasmota/release/).
+1. Download the Tasmota minimal firmware from the [official Tasmota repository](http://ota.tasmota.com/tasmota/release/tasmota-minimal.bin.gz).
 2. Upload the firmware file on the update page.
 
 ### Step 3: Update to Full Tasmota Firmware
@@ -60,7 +60,7 @@ If you want to flash custom firmware (e.g., Tasmota) to the bulb, follow these s
    http://<bulb ip>/up
    ```
 2. Upload the full Tasmota firmware file.
-
+  Download the Tasmota minimal firmware from the [official Tasmota repository](http://ota.tasmota.com/tasmota/release/tasmota.bin.gz).
 ---
 
 ## Notes
