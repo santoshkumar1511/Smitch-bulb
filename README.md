@@ -1,10 +1,11 @@
-# Smitch Bulb Control and Firmware Update
+# Smitch SMart Bulb Control and Firmware Update (B22)
 
 This repository provides a method to control Smitch bulbs that have become unusable after the company shut down. The steps below will guide you on how to control the bulb's brightness and temperature using Termux, as well as how to update the bulb's firmware to Tasmota for better functionality.
 
 ---
 
-## Prerequisites
+## Prerequisites for control via android
+**Note**: If your device has become disconnected from WiFi please refer: https://www.reddit.com/r/smarthome/comments/17wsg9b/comment/mclnpc2/
 
 1. **Termux**: Install Termux from the [Google Play Store](https://play.google.com/store/apps/details?id=com.termux) or [F-Droid](https://f-droid.org/packages/com.termux/).
 2. **Telnet**: Ensure Telnet is installed in Termux. Run the following command to install it:
@@ -15,7 +16,7 @@ This repository provides a method to control Smitch bulbs that have become unusa
 
 ---
 
-## Controlling the Bulb Using Termux (Only Works with White Light Bulbs)
+## Controlling the Bulb Using Termux / Terminal (Only Works For White Light Bulbs)
 
 ### Adjust Brightness
 To adjust the brightness of the bulb, use the following command in Termux:
@@ -37,7 +38,7 @@ To adjust the color temperature of the bulb, use the following command:
 
 ---
 
-## Updating the Bulb Firmware
+## Updating the Bulb's Firmware
 
 If you want to flash custom firmware (e.g., Tasmota) to the bulb, follow these steps:
 
@@ -46,25 +47,33 @@ If you want to flash custom firmware (e.g., Tasmota) to the bulb, follow these s
    ```
    http://<bulb ip>:1336/update
    ```
-2. Enter the following credentials:
+   You can figure out the bulb's IP by looking into your router's connected devices list.
+
+
+3. Enter the following credentials:
    - **Username**: `admin`
    - **Password**: `c21pdGNo`
 
 ### Step 2: Flash Tasmota Minimal Firmware
 1. Download the Tasmota minimal firmware from the [official Tasmota repository](http://ota.tasmota.com/tasmota/release/tasmota-minimal.bin.gz).(if downloading not working tap and hold, copy link paste in search box) 
-2. Upload the firmware file on the update page.
+2. Upload the firmware file on the update page. [You might see 2 fields labelled firmware and file system upgrade, choose the one which says "firmware"]
 
 ### Step 3: Update to Full Tasmota Firmware
 1. After flashing the minimal firmware, navigate to:
    ```
    http://<bulb ip>/up
    ```
-2. Upload the full Tasmota firmware file.
-  Download the Tasmota minimal firmware from the [official Tasmota repository](http://ota.tasmota.com/tasmota/release/tasmota.bin.gz).
+      **Note:** The IP you were using in the previous step will no longer work as, if the flash was successful, your smart device will be reset and you will need to scan for a new WiFi device on the network. Generally, this would look like the name of the pattern "ESP****" or something similar. Connect to the said SSID and follow the rest of the steps.
+   
+3. Upload the full Tasmota firmware file.
+  Download the full Tasmota firmware from the [official Tasmota repository](http://ota.tasmota.com/tasmota/release/tasmota.bin.gz).
+<br>
+  **Note:** If you encounter an error indicating “Not enough space” while uploading the entire firmware, try using the compressed “tasmota.bin.gz” file instead of the uncompressed one. If you haven’t enabled automatic extraction (for instance, when downloading via Safari), this shouldn’t be an issue that you encounter.
+   
 ---
 
 ## Notes
-- Ensure your device is connected to the same network as the bulb.
+- Ensure your device is connected to the same network as the bulb for step 1.
 - Flashing custom firmware may void any remaining warranty and carries some risk. Proceed with caution.
 
 ---
