@@ -4,8 +4,7 @@ This repository provides a method to control Smitch bulbs that have become unusa
 
 ---
 
-## Prerequisites for control via android
-**Note**: If your device has become disconnected from WiFi please refer: https://www.reddit.com/r/smarthome/comments/17wsg9b/comment/mclnpc2/
+## With termux 
 
 1. **Termux**: Install Termux from the [Google Play Store](https://play.google.com/store/apps/details?id=com.termux) or [F-Droid](https://f-droid.org/packages/com.termux/).
 2. **Telnet**: Ensure Telnet is installed in Termux. Run the following command to install it:
