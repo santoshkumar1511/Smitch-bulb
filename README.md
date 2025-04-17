@@ -77,6 +77,15 @@ If you want to flash custom firmware (e.g., Tasmota) to the bulb, follow these s
 
 ---
 
+## What's Next?
+
+- Once the device is flashed with custom firmware, the world is your oyster. Ideally, we would want to configure a working pin configuration and template. If using Tasmota, you can refer to [Tasmota Templates](https://templates.blakadder.com/bulb-socket.html) for a starting point on how to configure your newly flashed device.
+- Once a template is loaded, you might have to fine-tune the module and / or template configuration. This will require manual tinkering with the modules. Below is an example of a working example of Smitch 10W 6500K Dimmable Bulb (SB0110 - B22) post-tweaking from a base template. 
+
+<img width="452" alt="image" src="https://github.com/user-attachments/assets/65727427-9219-49dc-aba0-17a241680253" />
+
+
+---
 ## Contributing
 If you have improvements or additional methods to control the bulb, feel free to open an issue or submit a pull request.
 
