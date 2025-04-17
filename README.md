@@ -1,4 +1,4 @@
-# Smitch SMart Bulb Control and Firmware Update (B22)
+# Smitch Smart Bulb Control and Firmware Update (B22)
 
 This repository provides a method to control Smitch bulbs that have become unusable after the company shut down. The steps below will guide you on how to control the bulb's brightness and temperature using Termux, as well as how to update the bulb's firmware to Tasmota for better functionality.
 
