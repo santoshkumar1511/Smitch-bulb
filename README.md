@@ -40,14 +40,14 @@ To adjust the color temperature of the bulb, use the following command:
 
 
 
-## 🌈RGB Bulb Control
+## RGB Bulb Control
 
-### 🌞 Set Brightness
+### Set Brightness
 
 ```bash
 (echo -ne "0001xx07080000000\r"; sleep 2; echo -ne "KEEPALIVE\r"; sleep 2) | telnet <bulb ip> 80
 ```
-- `80` = Brightness in hex (range: `00` to `FF`)
+- `80` = Brightness in (range: `00` to `FF`)
 - Example: `80` = medium brightness
 
 ---
@@ -55,7 +55,7 @@ To adjust the color temperature of the bulb, use the following command:
 ### 💡 Set RGB Color
 
 ```bash
-(echo -ne "0001xx010RR0GGBB\r"; sleep 2; echo -ne "KEEPALIVE\r"; sleep 2) | telnet <ip> 80
+(echo -ne "0001xx010RRR0GGGBBB\r"; sleep 2; echo -ne "KEEPALIVE\r"; sleep 2) | telnet <ip> 80
 ```
 
 - Replace `RR`, `GG`, `BB` with **Decimal values** for each color component
@@ -122,6 +122,6 @@ If you want to flash custom firmware (e.g., Tasmota) to the bulb, follow these s
 ---
 ## Contributing
 If you have improvements or additional methods to control the bulb, feel free to open an issue or submit a pull request.
-
+Twitter :- @shekharbhatti1
 ---
 
