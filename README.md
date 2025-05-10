@@ -33,8 +33,8 @@ To adjust the color temperature of the bulb, use the following command:
 (echo -ne "0001xx016000\r"; sleep 2; echo -ne "KEEPALIVE\r"; sleep 2) | telnet <ip> 80
 ```
 - Replace `6000` with the desired temperature value. For example:
-  - `6000` for 6000K (warm light).
-  - `3000` for 3000K (cool light).
+  - `6000` for 6000K (cool light).
+  - `3000` for 3000K (warm light).
 
 ---
 
