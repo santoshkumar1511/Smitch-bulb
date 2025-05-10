@@ -47,7 +47,7 @@ To adjust the color temperature of the bulb, use the following command:
 ```bash
 (echo -ne "0001xx07080000000\r"; sleep 2; echo -ne "KEEPALIVE\r"; sleep 2) | telnet <bulb ip> 80
 ```
-- `80` = Brightness in (range: `00` to `FF`)
+- `80` = Brightness (range: `00` to `FF`)
 - Example: `80` = medium brightness
 
 ---
