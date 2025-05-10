@@ -9,7 +9,8 @@ This repository provides a method to control Smitch bulbs that have become unusa
 1. **Termux**: Install Termux from the [Google Play Store](https://play.google.com/store/apps/details?id=com.termux) or [F-Droid](https://f-droid.org/packages/com.termux/).
 2. **Telnet**: Ensure Telnet is installed in Termux. Run the following command to install it:
    ```bash
-   pkg install telnet
+   pkg update
+   pkg upgrade
    ```
 3. **Smitch Bulb**: Ensure the bulb is connected to your Wi-Fi network. The bulb's IP address can be any IP (`<ip>`), but most of the time, it is `192.168.4.1`.
 
