@@ -40,9 +40,9 @@ To adjust the color temperature of the bulb, use the following command:
 
 
 
-## ðŸŒˆ RGB Bulb Control
+## 🌈RGB Bulb Control
 
-### ðŸ”† Set Brightness
+### 🌞 Set Brightness
 
 ```bash
 (echo -ne "0001xx0104008010\r"; sleep 2; echo -ne "KEEPALIVE\r"; sleep 2) | telnet <ip> 80
@@ -52,7 +52,7 @@ To adjust the color temperature of the bulb, use the following command:
 
 ---
 
-### ðŸŽ¨ Set RGB Color
+### 💡 Set RGB Color
 
 ```bash
 (echo -ne "0001xx010RR0GGBB\r"; sleep 2; echo -ne "KEEPALIVE\r"; sleep 2) | telnet <ip> 80
