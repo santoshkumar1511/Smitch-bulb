@@ -123,7 +123,7 @@ If you want to flash custom firmware (e.g., Tasmota) to the bulb, follow these s
 ## Contributing
 
 - If you have improvements or additional methods to control the bulb, feel free to open an issue or submit a pull request.
-- 
-Twitter :- @shekharbhatti1
+  
+- Twitter :- @shekharbhatti1
 ---
 
