@@ -67,7 +67,7 @@ To adjust the color temperature of the bulb, use the following command:
 ```
 (echo -ne "0001xx010800408010\r"; sleep 2; echo -ne "KEEPALIVE\r"; sleep 2) | telnet <ip> 80
 ```
-- Red = `40`, Green = `80`, Blue = `10`
+- Red = `80`, Green = `40`, Blue = `10`
 
 ---
 
